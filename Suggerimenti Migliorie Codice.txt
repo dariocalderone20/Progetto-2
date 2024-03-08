@@ -1,0 +1,30 @@
+SUGGERIMENTI PER MIGLIORARE IL CODICE PROPOSTO
+
+
+Eliminare gli spazi tra il nome della funzione e le parentesi, per esempio da menu (); a menu();. Questa modifica non è strettamente necessaria dal punto di vista del funzionamento del programma, ma rende il codice più uniforme e conforme agli standard di scrittura del linguaggio C, rendendolo più leggibile e coerente. (Righe 11, 13, 61, 65, 82, 87, 106, 107)
+
+Nelle chiamate delle funzioni, c'è uno spazio aggiuntivo tra il nome della funzione e le parentesi, che non è necessario. Anche questo suggerimento riguarda principalmente la coerenza e la leggibilità del codice. (Righe 11, 13, 61, 65, 82, 87, 106, 107)
+
+Introdurre un ciclo do-while e la possibilità per l'utente di uscire dal programma. Questo suggerimento migliora l'usabilità dello stesso, consentendo agli utenti di continuare a interagire con il menu finché non decidono di uscire. Senza quest'opzione, l'utente potrebbe dover interrompere il programma manualmente, rendendolo meno user-friendly.
+
+Correggere l'errore nel formato di 'scanf' per 'scelta', sostituendo %d con %c. Utilizzare il formato %c anziché %d è necessario perché 'scelta' è una variabile di tipo 'char', quindi 'scanf' deve leggere un carattere anziché un numero intero. (Riga 18)
+
+Inserire uno spazio nel formato %c per evitare problemi con il tasto invio. Questo è importante per evitare problemi quando si legge un carattere da input. Senza lo spazio, scanf potrebbe ignorare gli spazi vuoti lasciati nella coda di input. (Riga 18)
+
+Manca il caso per gestire la scelta della lettera minuscola. È importante includere questa possibilità per rendere il programma più robusto e prevenire errori nel caso in cui l'utente inserisca input in un formato non previsto. (Righe 24, 29, 34)
+
+Aggiungere un caso default per gestire input non validi. Senza di esso, il programma potrebbe comportarsi in modo imprevisto o bloccarsi se l'utente inserisce un valore non previsto. (Righe 39-41)
+
+Aggiungere un controllo sul denominatore diverso da zero nella funzione dividi. È fondamentale verificare che il denominatore sia diverso da zero prima di eseguire una divisione per evitare errori di divisione per zero, che possono causare crash o comportamenti indesiderati del programma. (ighe 93-95)
+
+Utilizzare 'int' anziché 'short int' per i numeri da moltiplicare e dividere, per garantire la possibilità di gestire valori più ampi e prevenire errori di overflow o underflow. (Righe 61, 82)
+
+È consigliabile chiudere le stringhe di output con \n per una formattazione migliore.
+
+Correggere l'operatore di divisione 'dividi' da % a / . È importante utilizzare gli operatori corretti per le operazioni aritmetiche per ottenere il risultato desiderato. Utilizzare % anziché /, o viceversa, cambia completamente il significato dell'operazione. (Riga 97)
+
+Modificare l'output della divisione in dividi utilizzando %f al posto di %d per la variabile divisione. 'int' potrebbe contenere risultati con parte decimale, utilizzando %d viene specificato un formato di output che non considererà qualsiasi parte decimale della variabile. (Riga 100)
+
+Nella funzione moltiplica, correggere l'input da parte dell'utente utilizzando %d al posto di %f. Utilizzando %d, specifichiamo a 'scanf' di aspettarsi input numerici interi, in modo che l'utente possa inserire solo numeri interi, evitando errori di conversione. (Righe 67, 68)
+
+Implementare una gestione degli errori nel caso in cui la stringa inserita in 'ins_string' abbia più di 9 caratteri. Senza questa il programma potrebbe causare problemi se l'utente inserisce una stringa più lunga di quella prevista, rischiando di sovrascrivere la memoria o causare altri errori. (Righe 80-82)
